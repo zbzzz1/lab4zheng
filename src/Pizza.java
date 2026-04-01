@@ -1,45 +1,58 @@
 /**
- * Project: Lab 4
- * Purpose: Pizza object with getters, setters, constructor
+ * Project: Lab4
+ * Purpose Details: Pizza object for JSON messaging
  * Course: IST242
  * Author: Ziyan Zheng
- * Date Developed: 3/30/26
- * Last Date Changed: 3/30/26
- * Rev: 1
+ * Date Developed: 03/31/2026
+ * Last Date Changed: 03/31/2026
+ * Rev: 1.0
  */
 public class Pizza {
-    /**
-     * Size of pizza (small, medium, large)
-     */
+
+    private int id;
     private String size;
+    private String toppings;
+    private double price;
 
-    /**
-     * Crust type (thin, thick, stuffed)
-     */
-    private String crust;
-
-    /**
-     * Topping of pizza
-     */
-    private String topping;
-
-    /**
-     * Constructor for Pizza
-     * @param size pizza size
-     * @param crust crust type
-     * @param topping pizza topping
-     */
-    public Pizza(String size, String crust, String topping) {
-        this.size = size;
-        this.crust = crust;
-        this.topping = topping;
+    public Pizza() {
     }
 
-    public String getSize() { return size; }
-    public String getCrust() { return crust; }
-    public String getTopping() { return topping; }
+    public Pizza(int id, String size, String toppings, double price) {
+        this.id = id;
+        this.size = size;
+        this.toppings = toppings;
+        this.price = price;
+    }
 
-    public void setSize(String size) { this.size = size; }
-    public void setCrust(String crust) { this.crust = crust; }
-    public void setTopping(String topping) { this.topping = topping; }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getToppings() {
+        return toppings;
+    }
+
+    public void setToppings(String toppings) {
+        this.toppings = toppings;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }
